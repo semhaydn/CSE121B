@@ -26,12 +26,12 @@ document.getElementById("addNumbers").addEventListener("click", addNumber);
 
 
 /* Function Expression - Subtract Numbers */
-function subtract(num1, num2) {
+const subtract = function(num1, num2) {
     return num1 - num2;
-}
+};
 
-// Function Call
-function subtractNumber(){
+// Function Expression
+const subtractNumber = function(){
     // Read Input
     const num1 = Number(document.getElementById("subtract1").value);
     const num2 = Number(document.getElementById("subtract2").value);
@@ -41,20 +41,17 @@ function subtractNumber(){
 
     // Output difference
     document.getElementById("difference").value = difference;
-}
+};
 
 // Add Event Listener
 document.getElementById("subtractNumbers").addEventListener("click", subtractNumber);
 
 
 /* Arrow Function - Multiply Numbers */
+const multiply = (num1, num2) => num1 * num2;
 
-function multiply(num1, num2) {
-    return num1 * num2;
-}
-
-// Function Call
-function multiplyNumbers(){
+// Arrow Function
+const multiplyNumbers = () => {
     // Read Input
     const num1 = Number(document.getElementById("factor1").value);
     const num2 = Number(document.getElementById("factor2").value);
@@ -64,7 +61,7 @@ function multiplyNumbers(){
 
     // Output Product
     document.getElementById("product").value = product;
-}
+};
 
 // Add Event Listener
 document.getElementById("multiplyNumbers").addEventListener("click", multiplyNumbers);
